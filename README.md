@@ -1,1 +1,1 @@
-# slicks-slices
+# Slick Slices front-end
