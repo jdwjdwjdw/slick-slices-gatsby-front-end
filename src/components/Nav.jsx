@@ -18,6 +18,7 @@ const NavStyles = styled.nav`
     grid-template-columns: 1fr 1fr auto 1fr 1fr;
     grid-gap: 2rem;
     align-items: center;
+    margin-top: -6rem;
   }
   li {
     --rotate: -2deg;
@@ -41,6 +42,10 @@ const NavStyles = styled.nav`
       &:hover {
         color: var(--red);
       }
+      /* adjust link styling for current page */
+      /* &[aria-current='page'] {
+        color: var(--red);
+      } */
     }
   }
 `;
