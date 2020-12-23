@@ -11,7 +11,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-styled-components',
     {
-      // this is the mame of the plugin you are adding
+      // this is the name of the plugin you are adding
       resolve: 'gatsby-source-sanity',
       options: {
         projectId: 'xdisyh4e',
