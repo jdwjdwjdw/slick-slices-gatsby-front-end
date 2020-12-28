@@ -90,7 +90,7 @@ async function fetchBeersAndTurnIntoNodes({
 
 export async function sourceNodes(params) {
   // fetch a list of beers and source them into our gatsby API
-  await Promise.all[fetchBeersAndTurnIntoNodes(params)];
+  await Promise.all([fetchBeersAndTurnIntoNodes(params)]);
 }
 
 export async function createPages(params) {
