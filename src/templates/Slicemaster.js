@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
+import SEO from '../components/SEO';
 
 const SlicemasterStyles = styled.div`
   h2 {
@@ -16,13 +17,16 @@ const SlicemasterStyles = styled.div`
 
 export default function SlicemasterPage({ data: { person } }) {
   return (
-    <SlicemasterStyles className="center">
-      <h2>
-        <span className="mark">{person.name}</span>
-      </h2>
-      <Img fluid={person.image.asset.fluid} />
-      <p>{person.description}</p>
-    </SlicemasterStyles>
+    <>
+      <SEO title={person.name} image={person.image.asset.src} />
+      <SlicemasterStyles className="center">
+        <h2>
+          <span className="mark">{person.name}</span>
+        </h2>
+        <Img fluid={person.image.asset.fluid} />
+        <p>{person.description}</p>
+      </SlicemasterStyles>
+    </>
   );
 }
 
