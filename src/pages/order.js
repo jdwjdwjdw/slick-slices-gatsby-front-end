@@ -101,7 +101,9 @@ export default function OrderPage({ data }) {
           />
         </fieldset>
         <fieldset>
-          <h3>Your Total is {calculateOrderTotal(order, pizzas)}</h3>
+          <h3>
+            Your Total is {formatMoney(calculateOrderTotal(order, pizzas))}
+          </h3>
           <div>{error ? <p>Error: {error}</p> : ''}</div>
           <button type="submit" disabled={loading}>
             {loading ? 'Placing Order...' : 'Order Ahead'}
