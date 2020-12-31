@@ -44,7 +44,15 @@ const transporter = nodemailer.createTransport({
 exports.handler = async (event, context) => {
   // await wait(5000);
   const body = JSON.parse(event.body);
-  console.log(body);
+  // Check if they have filled out the honeypot
+  if (body.mapleSyrup) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({
+        message: 'Boop beep bop zzzzst good bye... ERR 34234',
+      }),
+    };
+  }
   // Validate the data coming in is correct
   const requiredFields = ['email', 'name', 'order'];
 
